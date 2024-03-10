@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     padding: 8vmin 4vmin 4vmin;
+    background-color: rgb(23, 23, 23);
 }
 
 .gh-foot .gh-container {
@@ -48,6 +49,7 @@
     font-size: 1.5rem;
     text-align: center;
     opacity: 0.75;
+    color: white;
 }
 
 @media (max-width: 700px) {

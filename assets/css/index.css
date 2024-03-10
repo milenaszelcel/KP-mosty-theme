@@ -30,6 +30,49 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
+.company-image{
+    border-radius: 100%;
+    min-height: 8vw;
+    min-width: 8vw;
+    max-width: 8vh;
+    max-height: 8vh;
+    margin:10px;
+    object-fit: contain;
+}
+
+.tag-name{
+    font-size: 46px;
+    padding: 8vmin;
+}
+
+.header{
+    width: 100vw;
+    z-index: 10;
+}
+
+.site-header-cover {
+    width: 100%;
+    height: 30vw;
+    object-fit:cover;
+    margin-top:50px;
+}
+
+.company-list{
+    display: flex;
+    flex-direction: row;
+    max-width:max-content;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+.companies-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 html,
 .gh-viewport {
     display: flex;
@@ -51,6 +94,7 @@ html,
 .gh-article {
     padding: 8vmin 0;
 }
+
 
 .gh-postfeed {
     display: grid;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset "built/index.css"}}" />
     <script src="{{asset "built/index.js"}}" defer></script>
+    <link rel="icon" type="image/x-icon" href={{@site.logo}}>
 
     <title>{{meta_title}}</title>
 
@@ -16,8 +17,8 @@
 <body class="{{body_class}}">
 <div class="gh-viewport">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
+<header id="gh-head" class="gh-head header">
+    <nav class="gh-head-inner">
 
         <div class="gh-head-brand">
             <a class="gh-head-logo" href="{{@site.url}}">
@@ -36,19 +37,14 @@
         <div class="gh-head-menu">
             {{navigation}}
         </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{search}}
-                {{#if @site.members_enabled}}
-                    {{^if @member}}
-                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
-                    {{else}}
-                    <a class="gh-button" href="#/portal/account">Account</a>
-                    {{/if}}
-                {{/if}}
-            </div>
-        </div>
+       
     </nav>
+    
+        {{#if @site.cover_image}}
+            <img class="site-header-cover" srcset="{{img_url @site.cover_image size=" s"}} 300w, {{img_url @site.cover_image
+                size="m" }} 600w, {{img_url @site.cover_image size="l" }} 1000w, {{img_url @site.cover_image size="xl" }} 2000w"
+                sizes="100vw" src="{{img_url @site.cover_image size=" xl"}}" alt="{{@site.title}}" />
+        {{/if}}
 </header>
 
 <main class="gh-main">
