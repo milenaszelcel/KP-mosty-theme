@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="{{asset "built/index.css"}}" />
     <script src="{{asset "built/index.js"}}" defer></script>
     <link rel="icon" type="image/x-icon" href={{@site.logo}}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
     <title>{{meta_title}}</title>
 
@@ -19,8 +22,9 @@
 
 <header id="gh-head" class="gh-head header">
     <nav class="gh-head-inner">
-
+        
         <div class="gh-head-brand">
+           
             <a class="gh-head-logo" href="{{@site.url}}">
                 {{#if @site.logo}}
                     <img src="{{@site.logo}}" alt="{{@site.title}}" />
@@ -36,14 +40,25 @@
         </div>
         <div class="gh-head-menu">
             {{navigation}}
+           
         </div>
        
     </nav>
     
         {{#if @site.cover_image}}
-            <img class="site-header-cover" srcset="{{img_url @site.cover_image size=" s"}} 300w, {{img_url @site.cover_image
-                size="m" }} 600w, {{img_url @site.cover_image size="l" }} 1000w, {{img_url @site.cover_image size="xl" }} 2000w"
-                sizes="100vw" src="{{img_url @site.cover_image size=" xl"}}" alt="{{@site.title}}" />
+            <div class="cover-container">
+                <svg class="site-header-cover" srcset="{{img_url @site.cover_image size=" s"}} 300w, {{img_url @site.cover_image
+                    size="m" }} 600w, {{img_url @site.cover_image size="l" }} 1000w, {{img_url @site.cover_image size="xl" }} 2000w"
+                    sizes="100vw" src="{{img_url @site.cover_image size=" xl"}}" alt="{{@site.title}}" />
+                <div class="owner-description-container">
+                    <div class="site-description-box">
+                        <h3 class="site-description">{{@site.description}}</h3>
+                    </div>
+                   
+                </div>
+               
+            </div>
+            
         {{/if}}
 </header>
 

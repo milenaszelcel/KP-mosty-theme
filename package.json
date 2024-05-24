@@ -59,6 +59,13 @@
         "defaults"
     ],
     "config": {
+        "custom": {
+            "phone-number": {
+                "type": "text",
+                "default": "48+ 123 456 789",
+                "group": "kontakt"
+            }
+        },
         "card_assets": true,
         "posts_per_page": 15,
         "image_sizes": {
@@ -81,6 +88,7 @@
                 "width": 2000
             }
         }
+        
     },
     "type": "module"
 }

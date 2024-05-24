@@ -5,7 +5,7 @@
         <div class="companies-container">
             {{#get "tags" limit="1" filter="slug:companies"}}
                 {{#foreach tags}}
-                    <h1 class="gh-title tag-name">{{name}}</h1>
+                    <p class="gh-title tag-name">{{name}}</p>
                 {{/foreach}}
            {{/get}}
 
@@ -22,14 +22,22 @@
             {{/get}}
             </figure>
 
-            {{#get "pages" filter="tag:kontakt" limit="1"}}
-                {{#foreach pages}}
-                    <h2>{{title}}</h2>
-                    <p>{{content}}</p>
-                {{/foreach}}
-            {{/get}}
-
         </div>
+            {{#get "pages" filter="tag:kontakt" limit="1"}}
+            {{#foreach pages}}
+            <div class="contact-banner">
+                <div class="contact-container">
+                    <div class="contact-title-container">
+                        <h2 class="contact-title">{{title}}</h2>
+                    </div>
+            
+                    {{#if @custom.numer-telefonu}}
+                        <p>{{@custom.numer-telefonu}}</p>
+                    {{/if}}
+                </div>
+            </div>
+            {{/foreach}}
+            {{/get}}
 
         {{!-- If JS isn't enabled, fallback to standard pagination --}}
         <noscript>

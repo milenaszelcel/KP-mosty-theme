@@ -5,8 +5,8 @@
 
     /* Colours */
     --color-primary: var(--ghost-accent-color, #3eb0ef);
-    --color-base: #131313;
-    --color-border: #ddd;
+    --color-base: #464646;
+    --color-border: #464646;
     --color-bg: #f5f5f5;
     --color-success: #80b912;
     --color-error: #f05230;
