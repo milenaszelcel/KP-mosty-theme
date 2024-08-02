@@ -1,0 +1,64 @@
+{{!< default}}
+{{#get "pages" filter="tag:contact" limit="1"}}
+    {{#foreach pages}}
+        <div class="main-content">
+            <div class="contact-content" id="contact">
+
+                <div class="container-column container-centered">
+                    <h2 class="title">{{title}}</h2>
+                    <div class="contact-box">
+                       {{> contact-block underlineState="with-line" color="blue"}}
+                        {{!-- <div class="label-container">
+                            <span class="material-symbols-outlined">
+                                call
+                            </span>
+                            <div class="contact-label">Numer telefonu</div>
+                        </div>
+
+                        {{#if @custom.numer_telefonu}}<div
+                                class="contact-item"
+                            >{{@custom.numer_telefonu}}</div>{{/if}}
+                        <hr class="underline" />
+                        <div class="label-container">
+                            <span class="material-symbols-outlined">
+                                mail
+                            </span>
+                            <div class="contact-label">E-mail</div>
+                        </div>
+
+                        {{#if @custom.e-mail}}<div
+                                class="contact-item"
+                            >{{@custom.e-mail}}</div>{{/if}}
+                        <hr class="underline" />
+                        <div class="label-container">
+                            <span class="material-symbols-outlined">
+                                pin_drop
+                            </span>
+                            <div class="contact-label">Adres</div>
+                        </div>
+
+                        {{#if @custom.adres}}<div
+                                class="contact-item"
+                            >{{@custom.adres}}</div>{{/if}}
+                        <hr class="underline" />
+                        <div class="label-container">
+                            <span class="material-symbols-outlined">
+                                business_center
+                            </span>
+
+                            <div class="contact-label">NIP</div>
+
+                        </div> --}}
+                        {{!-- 
+                        {{#if @custom.numer_telefonu}}<div
+                                class="contact-item"
+                            >{{@custom.NIP}}</div>{{/if}}
+                        <hr class="underline" /> --}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{/foreach}}
+{{/get}}

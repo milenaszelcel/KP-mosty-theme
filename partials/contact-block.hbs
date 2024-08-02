@@ -1,0 +1,66 @@
+<div class="contact-container">
+    <div class="contact-element">
+        <div class="contact-label-row {{color}}">
+            <span class="material-symbols-outlined">
+                call
+            </span>
+            <div class="contact-label">Numer telefonu</div>
+        </div>
+
+        {{#if @custom.numer_telefonu}}<div class="contact-item"><a
+                    class="link"
+                    href="tel:+{{{@custom.numer_telefonu}}}"
+                >{{@custom.numer_telefonu}}</a>
+            </div>{{/if}}
+    </div>
+    {{#if underlineState}}
+        <hr class="underline" />
+    {{/if}}
+    <div class="contact-element">
+        <div class="contact-label-row {{color}}">
+            <span class="material-symbols-outlined">
+                mail
+            </span>
+            <div class="contact-label">
+                E-mail</div>
+        </div>
+
+        {{#if @custom.e-mail}}<div class="contact-item">
+                <a
+                    class="link"
+                    href="mailto:{{@custom.e-mail}}"
+                >{{@custom.e-mail}}</a></div>{{/if}}
+    </div>
+    {{#if underlineState}}
+        <hr class="underline" />
+    {{/if}}
+    <div class="contact-element">
+        <div class="contact-label-row {{color}}">
+            <span class="material-symbols-outlined">
+                pin_drop
+            </span>
+            <div class="contact-label">Adres</div>
+        </div>
+
+        {{#if @custom.adres}}<div
+                class="contact-item"
+            >{{@custom.adres}}</div>{{/if}}
+    </div>
+    {{#if underlineState}}
+        <hr class="underline" />
+    {{/if}}
+    <div class="contact-element">
+        <div class="contact-label-row {{color}}">
+            <span class="material-symbols-outlined">
+                business_center
+            </span>
+            <div class="contact-label">NIP</div></div>
+
+        {{#if @custom.NIP}}<div
+                class="contact-item"
+            >{{@custom.NIP}}</div>{{/if}}
+    </div>
+    {{#if underlineState}}
+        <hr class="underline" />
+    {{/if}}
+</div>

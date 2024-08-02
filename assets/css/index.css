@@ -5,8 +5,9 @@ production stylesheet in assets/built/screen.css using: npm run dev
 
 */
 
-/* Lib - Local component imports
-/* ---------------------------------------------------------- */
+/* Lib - Local component imports */
+
+@import "custom/main.csss";
 
 /* Base components */
 @import "vars.css";
@@ -16,159 +17,24 @@ production stylesheet in assets/built/screen.css using: npm run dev
 
 /* Ghost components */
 @import "ghost/header.css";
-@import "ghost/content.css";
+/* @import "ghost/content.css";
 @import "ghost/readmore.css";
 @import "ghost/members.css";
 @import "ghost/errors.css";
 @import "ghost/footer.css";
 @import "ghost/badge.css";
 @import "ghost/pagination.css";
-@import "ghost/comments.css";
-
-
+@import "ghost/comments.css"; */
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
-
-.company-image{
-    border-radius: 100%;
-    min-height: 8vw;
-    min-width: 8vw;
-    max-width: 8vh;
-    max-height: 8vh;
-    margin:10px;
-    object-fit: contain;
-}
-
-/* Contact */
-.contact-container{
-    margin:20px;
-    border: 2px solid var(--color-primary);
-    border-radius: 10px;
-    width: 80vw;
-    height: 30vw;
-    display: flex;
-    flex-direction: column;
-
-}
-.contact-banner{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin:20px;
-}
-
-.contact-title{
-    width:220px;
-    margin-top:-35px;
-    align-self: center;
-    font-size: 56px;
-    align-items: center;
-    background-color: white;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--color-primary);
-}
-
-.contact-title-container{
-    display: flex;
-    justify-content: center;
-}
-
-
-.tag-name{
-    font-size: 56px;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 4vmin;
-    color: var(--color-primary);
-}
-
-.header{
-    width: 100vw;
-    z-index: 8;
-}
-
-.site-header-cover {
-    width: 100%;
-    height: 30vw;
-    margin-top:100px;
-    z-index: 1;
-}
-
-.cover-container{
-    z-index: 1;
-    position:relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/* .site-owner-name{
-    color: rgb(255, 255, 255);
-    font-size: 46px;
-    background-color: rgba(255, 255, 255, 0.25);
-    padding: 10px;
-    border-radius: 4px;
-    padding: 10px;
-    font-weight: normal;
-    box-shadow: 5px 6px 8px -7px rgba(117, 117, 133, 1);
-} */
-
-.site-description{
-    color: #ffffff;
-    font-size: 2.8vw;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    width:30vw;
-    margin:5px;
-}
-.site-description-box{
-    width: 30vw;
-    height: 15vw;
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.25);
-    padding: 20px;
-    border-top-right-radius: 140px;
-}
-
-.owner-description-container{
-    display: flex;
-    align-items:end;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-}
-
-.company-list{
-    display: flex;
-    flex-direction: row;
-    max-width:max-content;
-    flex-wrap:wrap;
-    justify-content: center;
-    gap:10px;
-    margin-bottom: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 30px;
-}
-
-.companies-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 html,
 .gh-viewport {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #ffffff;
+    background: var(--color-bg);
 }
 
 .gh-main {
@@ -185,7 +51,6 @@ html,
     padding: 8vmin 0;
 }
 
-
 .gh-postfeed {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
@@ -199,7 +64,7 @@ html,
 
 .gh-container {
     width: 100%;
-    max-width: 1200px;
+
     margin: 0 auto;
 }
 
@@ -247,7 +112,6 @@ html,
     aspect-ratio: 16 / 9;
 }
 
-
 .gh-card-meta {
     display: block;
     margin: 0 0 1rem;
@@ -278,7 +142,6 @@ html,
     opacity: 0.75;
 }
 
-
 /* Page
 /* ---------------------------------------------------------- */
 
@@ -306,7 +169,6 @@ html,
         font-size: 1.6rem;
     }
 }
-
 
 /* Post
 /* ---------------------------------------------------------- */
@@ -344,7 +206,6 @@ html,
     margin: 2rem 0;
 }
 
-
 /* Author Archive
 /* ---------------------------------------------------------- */
 
@@ -381,7 +242,7 @@ html,
     margin: 0 1.25vmin 0 0;
     height: 1em;
     width: 1px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     transform: rotate(20deg);
 }
 

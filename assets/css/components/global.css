@@ -17,17 +17,16 @@ body {
     margin: 0;
     padding: 0;
     color: #464646;
-    font-family: var(--font-sans-serif);
-    font-size: 1.5rem;
-    line-height: 1.6em;
+    font-family: "Inria Serif", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.5rem;
+
     background: #fff;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 
 p,
 ul,
@@ -127,7 +126,7 @@ a:not([class]) {
 
 a[class] {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
     transition: 0.4s ease;
 }
 
