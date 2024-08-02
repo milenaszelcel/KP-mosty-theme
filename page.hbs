@@ -1,28 +1,28 @@
 {{!< default}}
 {{#post}}
-    <div class="{{post_class}} projects-content">
-        {{#match @page.show_title_and_feature_image}}
+<div class="{{ post_class }} projects-content">
+  {{#match @page.show_title_and_feature_image}}
 
-            <h1 class="title">{{title}}</h1>
+  <h1 class="title">{{ title }}</h1>
 
-            {{#if custom_excerpt}}
-                <p class="gh-excerpt">{{custom_excerpt}}</p>
-            {{/if}}
+  {{#if custom_excerpt}}
+  <p class="gh-excerpt">{{ custom_excerpt }}</p>
+  {{/if}}
 
-            {{#if feature_image}}
+  {{#if feature_image}}
 
-                <figure class="gh-feature-image">
-                    <img src="{{feature_image}}" alt="{{title}}" />
-                    {{#if feature_image_caption}}
-                        <figcaption>{{feature_image_caption}}</figcaption>
-                    {{/if}}
-                </figure>
+  <figure class="gh-feature-image">
+    <img src="{{ feature_image }}" alt="{{ title }}" />
+    {{#if feature_image_caption}}
+    <figcaption>{{ feature_image_caption }}</figcaption>
+    {{/if}}
+  </figure>
 
-            {{/if}}
+  {{/if}}
 
-        {{/match}}
-        <div class="gh-content gh-canvas page">
-            {{content}}
-        </div>
-    </div>
+  {{/match}}
+  <div class="gh-content gh-canvas page">
+    {{ content }}
+  </div>
+</div>
 {{/post}}

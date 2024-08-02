@@ -1,9 +1,12 @@
-{{!< default}} {{#get "pages" filter="tag:about" limit="1" }} {{#foreach pages}} <div class="contact-banner">
-    <div class="contact-container">
-        <h2 class="contact-title">{{title}}</h2>
-        <p>{{content}}</p>
-    </div>
-    </div>
+{{!< default}}
+{{#get "pages" filter="tag:about" limit="1"}}
+{{#foreach pages}}
+<div class="contact-banner">
+  <div class="contact-container">
+    <h2 class="contact-title">{{ title }}</h2>
+    <p>{{ content }}</p>
+  </div>
+</div>
 
-    {{/foreach}}
-    {{/get}}
+{{/foreach}}
+{{/get}}

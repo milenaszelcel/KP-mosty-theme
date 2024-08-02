@@ -33,7 +33,7 @@ We've documented this starter theme pretty heavily so that it should be possible
 
 🚢&nbsp;Ghost's [GH Deploy Action](.github/workflows/deploy-theme.yml) included by default. [Learn more how to deploy your theme automatically](https://github.com/TryGhost/action-deploy-theme)
 
-➕&nbsp;Extensible by design. Rollup's configuration structure makes it easy to add [any number of plugins easily](https://github.com/rollup/plugins). 
+➕&nbsp;Extensible by design. Rollup's configuration structure makes it easy to add [any number of plugins easily](https://github.com/rollup/plugins).
 
 &nbsp;
 
@@ -58,13 +58,13 @@ One neat trick is that you can also create custom one-off templates just by addi
 
 ## Development guide
 
-The Starter theme provides a first-class development experience out of the box. 
+The Starter theme provides a first-class development experience out of the box.
 
 &nbsp;
 
 ### Setup
 
-To see realtime changes during development, symlink the Starter theme folder to the `content/themes` folder in your local Ghost install. 
+To see realtime changes during development, symlink the Starter theme folder to the `content/themes` folder in your local Ghost install.
 
 ```bash
 ln -s /path/to/starter /ghost/content/themes/starter
@@ -117,8 +117,6 @@ npm run test
 ```
 
 &nbsp;
-
-
 
 ## Copyright & License
 

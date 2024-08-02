@@ -1,22 +1,17 @@
 {{#get "tags" limit="1" filter="slug:companies"}}
-    {{#foreach tags}}
-        <p class="gh-title title">{{name}}</p>
-    {{/foreach}}
+{{#foreach tags}}
+<p class="gh-title title">{{ name }}</p>
+{{/foreach}}
 {{/get}}
 <figure class="company-list">
-
-    {{#get "posts" filter="tags:companies"}}
-        {{#foreach posts}}
-            {{#if feature_image}}
-                <img
-                    class="company-image"
-                    src="{{feature_image}}"
-                    alt="{{title}}"
-                />
-                {{#if feature_image_caption}}
-                    <figcaption>{{feature_image_caption}}</figcaption>
-                {{/if}}
-            {{/if}}
-        {{/foreach}}
-    {{/get}}
+  {{#get "posts" filter="tags:companies"}}
+  {{#foreach posts}}
+  {{#if feature_image}}
+  <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
+  {{#if feature_image_caption}}
+  <figcaption>{{ feature_image_caption }}</figcaption>
+  {{/if}}
+  {{/if}}
+  {{/foreach}}
+  {{/get}}
 </figure>
