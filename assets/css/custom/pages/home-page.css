@@ -1,15 +1,5 @@
 /* index-content */
-.main-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: white;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  gap: 64px;
-  /* padding: 64px 32px; */
-}
+
 
 .main-site-gallery {
   gap: 0;

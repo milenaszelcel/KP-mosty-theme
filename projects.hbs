@@ -1,6 +1,6 @@
 {{!< default}}
-<div class="main-content" id="projekty">
-  <div class="container-column container-centered">
+<div class="main-content">
+  <div class="container-column container-centered" id="projekty">
     {{#get "tags" limit="1" filter="slug:projects"}}
     {{#foreach tags}}
     <div class="title">
@@ -27,6 +27,6 @@
   </div>
 
   <div class="container-column container-centered">
-    {{> companies}}
+    {{> companies limit=1000}}
   </div>
 </div>

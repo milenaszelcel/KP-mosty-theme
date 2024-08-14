@@ -23,23 +23,28 @@
   <body class="{{ body_class }} body">
     <div class="gh-viewport">
       <header id="gh-head" class="gh-head header">
-        <div class="header-navigation">
-          <div class="logo">
-            <a class="gh-head-logo" href="{{@site.url}}">
-              {{#if @site.logo}}
-              <img class="logo" src="{{@site.logo}}" alt="{{@site.title}}" />
-              {{else}}
-              {{@site.title}}
-              {{/if}}
-            </a>
-          </div>
-          <a class="gh-burger" role="button" aria-label="menu">
-            <div class="gh-burger-box">
-              <div class="gh-burger-inner"></div>
+        <div class="header-container">
+          <div class="header-navigation">
+            <div class="logo">
+              <a class="logo" href="{{@site.url}}">
+                {{#if @site.logo}}
+                <img class="logo" src="{{@site.logo}}" alt="{{@site.title}}" />
+                {{else}}
+                {{@site.title}}
+                {{/if}}
+              </a>
             </div>
-          </a>
-          <div class="gh-head-menu burger-menu">
-            {{ navigation }}
+
+            <a class="gh-burger burger-button" role="button" aria-label="menu">
+              <div class="gh-burger-box">
+                <div class="gh-burger-inner"></div>
+              </div>
+              <div class="gh-head-menu burger-menu">
+                <div class="burger-container">
+                  {{ navigation }}
+                </div>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -49,7 +54,7 @@
       </header>
 
       <main class="gh-main">
-        {{ body }}
+        {{{body}}}
       </main>
 
       <footer class="footer" id="footer">
@@ -67,7 +72,7 @@
           </div>
         </div>
         <div class="gh-foot-meta">
-          Stworzone za pomocą
+          Stworzone z pomocą
           <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
       </footer>

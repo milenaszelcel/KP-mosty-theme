@@ -4,12 +4,24 @@
 {{/foreach}}
 {{/get}}
 <figure class="company-list">
-  {{#get "posts" filter="tags:companies"}}
+  {{#get "posts" filter="tags:companies" limit=limit }}
+
   {{#foreach posts}}
   {{#if feature_image}}
-  <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
+  {{#if title }}
+    <a href={{title}}>
+      <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
+    </a>
+  {{else}}
+   <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
+  {{/if}}
+    
+    {{!-- <div class="company-details">{{ content }}</div> --}}
+ 
+
   {{#if feature_image_caption}}
   <figcaption>{{ feature_image_caption }}</figcaption>
+
   {{/if}}
   {{/if}}
   {{/foreach}}

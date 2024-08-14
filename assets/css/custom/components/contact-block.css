@@ -36,4 +36,8 @@
 .underline {
   grid-column: 1 / span 2;
   opacity: 1;
+  border-color: var(--color-bg);
+}
+.contact-item a {
+  text-underline-offset: 6px;
 }

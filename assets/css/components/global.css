@@ -13,7 +13,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   color: #464646;
@@ -120,14 +119,18 @@ ul:not([class]) li + li {
 }
 
 a:not([class]) {
-  color: var(--color-primary);
   text-decoration-skip-ink: auto;
 }
 
 a[class] {
-  color: inherit;
-  text-decoration: underline;
   transition: 0.4s ease;
+}
+
+footer a {
+  color: white;
+}
+header a {
+  color: var(--color-base);
 }
 
 a[class]:hover {
