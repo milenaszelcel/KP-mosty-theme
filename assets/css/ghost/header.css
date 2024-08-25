@@ -69,7 +69,6 @@
 .gh-head-menu .nav a {
   display: inline-block;
   padding: 5px 0;
-  font-size: 20px;
 }
 
 .gh-head-menu .nav-current a {
@@ -105,7 +104,6 @@
 /* ---------------------------------------------------------- */
 
 .gh-burger {
-  position: relative;
   display: none;
   cursor: pointer;
 }
@@ -239,12 +237,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 /* ---------------------------------------------------------- */
 /* IDs needed to ensure sufficient specificity */
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .gh-burger {
     display: inline-block;
   }
   #gh-head {
-    transition: all 0.4s ease-out;
+    /* transition: all 0.4s ease-out; */
     overflow: hidden;
   }
   #gh-head .gh-head-inner {
@@ -314,7 +312,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     bottom: 0;
     left: 0;
     z-index: 900;
-    overflow-y: scroll;
   }
   .gh-head-open #gh-head .gh-head-inner {
     grid-template-rows: auto 1fr auto;

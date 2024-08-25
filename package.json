@@ -89,6 +89,12 @@
       "biale_logo": {
         "type": "image",
         "group": "kontakt"
+      },
+      "api_key": {
+        "description": "Klucz do API do wygrenerowania -> https://web3forms.com",
+        "default": "123545",
+        "type": "text",
+        "group": "kontakt"
       }
     },
     "card_assets": true,

@@ -1,6 +1,8 @@
 {{#get "tags" limit="1" filter="slug:companies"}}
 {{#foreach tags}}
-<p class="gh-title title">{{ name }}</p>
+<div><p class="gh-title title">{{ name }}</p>
+<hr class="underline" /></div>
+
 {{/foreach}}
 {{/get}}
 <figure class="company-list">

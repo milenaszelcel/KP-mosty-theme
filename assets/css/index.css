@@ -164,7 +164,7 @@ html,
   opacity: 0.5;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .gh-page-head > p {
     font-size: 1.6rem;
   }
@@ -246,7 +246,7 @@ html,
   transform: rotate(20deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .gh-author-meta {
     font-size: 1.6rem;
   }

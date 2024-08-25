@@ -12,6 +12,11 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .footer-container {
+    align-items: center;
+  }
+}
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -20,5 +25,5 @@
 }
 
 .footer-contact-container {
-  font-size: 18px;
+  font-size: 1.8rem;
 }

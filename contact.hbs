@@ -1,16 +1,12 @@
 {{!< default}}
-{{#get "pages" filter="tag:contact" limit="1"}}
-{{#foreach pages}}
-<div class="main-content">
-  <div class="contact-content" id="contact">
-    <div class="container-column container-centered">
-      <h2 class="title">{{ title }}</h2>
-      <div class="contact-box">
-        {{> contact-block underlineState="with-line" color="blue"}}
-      </div>
+<div class="contact-content" id="contact">
+  <div class="contact-sides">
+    {{> contact-form }}
+    <span class="line"></span>
+    <div class="contact-box">
+      {{> contact-block underlineState="with-line" color="beige"}}
+      {{#if @custom.biale_logo}}<img src="{{@custom.biale_logo}}" class="contact-logo" />
+      {{/if}}
     </div>
   </div>
 </div>
-
-{{/foreach}}
-{{/get}}

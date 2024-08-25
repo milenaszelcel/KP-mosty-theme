@@ -1,29 +1,30 @@
 {{!< default}}
-<div class="main-content">
-  <div class="container-column container-centered" id="projekty">
-    {{#get "tags" limit="1" filter="slug:projects"}}
-    {{#foreach tags}}
+<div class="main-content" id="projekty">
+  <div class="container-centered container">
+    {{#get "pages" limit="1" filter="tag:projects"}}
+    {{#foreach pages}}
     <div class="title">
-      {{ name }}
+      {{ title }}
+      <hr class="underline" />
     </div>
 
     {{/foreach}}
     {{/get}}
-    <div class="projects-container">
-      {{#get "posts" filter="tags:projects"}}
-      {{#foreach posts}}
-      {{#if feature_image}}
-      <div class="photo-container">
-        <figure class="project-container">
-          <img src="{{ feature_image }}" alt="{{ title }}" class="project-image" />
-          <figcaption class="project-title">{{ title }}</figcaption>
-        </figure>
-      </div>
-
-      {{/if}}
-      {{/foreach}}
-      {{/get}}
+  </div>
+  <div class="projects-container">
+    {{#get "posts" filter="tags:projects"}}
+    {{#foreach posts}}
+    {{#if feature_image}}
+    <div class="photo-container">
+      <figure class="project-container">
+        <img src="{{ feature_image }}" alt="{{ title }}" class="project-image" />
+        <figcaption class="project-title">{{ title }}</figcaption>
+      </figure>
     </div>
+
+    {{/if}}
+    {{/foreach}}
+    {{/get}}
   </div>
 
   <div class="container-column container-centered">

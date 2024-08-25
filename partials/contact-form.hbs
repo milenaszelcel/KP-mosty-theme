@@ -1,0 +1,45 @@
+{{!-- web3forms api for form to contact --}}
+
+<script>
+  window.onload = function () {
+    // Reset the form fields when the page loads
+    document.getElementById('form').reset()
+  }
+</script>
+{{#if @custom.api_key}}
+<div class="form-container">
+  <div class="contact-banner">Napisz do nas</div>
+  <hr class="underline" />
+  <form action="https://api.web3forms.com/submit" method="POST" id="form" class="contact-form">
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="{{@custom.api_key}}" />
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+    <div class="contact-form-element">
+      <div class="contact-form-label">Imię i nazwisko</div>
+      <input type="text" name="name" required class="contact-input" />
+    </div>
+    <div class="contact-form-element">
+      <div class="contact-form-label">E-mail</div>
+      <input type="email" name="email" required class="contact-input" />
+    </div>
+    <div class="contact-form-element">
+      <div class="contact-form-label">Temat</div>
+      <input type="text" name="subject" class="contact-input" />
+    </div>
+    <div class="contact-form-element">
+      <div class="contact-form-label">Wiadomość</div>
+      <textarea name="message" required class="text-area" rows="16"></textarea>
+    </div>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none" />
+
+    <!-- Custom Confirmation / Success Page -->
+    <input type="hidden" name="redirect" value="http://localhost:2368/kontakt/ś®" />
+
+    <button type="submit" class="contact-form-button">Wyślij</button>
+  </form>
+</div>
+
+{{/if}}

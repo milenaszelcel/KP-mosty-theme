@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <title>{{ meta_title }}</title>
 
@@ -23,8 +24,8 @@
   <body class="{{ body_class }} body">
     <div class="gh-viewport">
       <header id="gh-head" class="gh-head header">
-        <div class="header-container">
-          <div class="header-navigation">
+        <div class="header-navigation">
+          <div class="logo-burger-button-container">
             <div class="logo">
               <a class="logo" href="{{@site.url}}">
                 {{#if @site.logo}}
@@ -34,17 +35,17 @@
                 {{/if}}
               </a>
             </div>
-
             <a class="gh-burger burger-button" role="button" aria-label="menu">
               <div class="gh-burger-box">
                 <div class="gh-burger-inner"></div>
               </div>
-              <div class="gh-head-menu burger-menu">
-                <div class="burger-container">
-                  {{ navigation }}
-                </div>
-              </div>
             </a>
+          </div>
+
+          <div class="gh-head-menu burger-menu">
+            <div class="burger-container header-element">
+              {{ navigation }}
+            </div>
           </div>
         </div>
 
@@ -56,8 +57,10 @@
       <main class="gh-main">
         {{{body}}}
       </main>
-
-      <footer class="footer" id="footer">
+        {{#is "kontakt"}}
+    <!-- Nie wyświetlaj stopki -->
+        {{else}}
+             <footer class="footer" id="footer">
         <div class="gh-container">
           <div class="gh-foot-menu">
             {{navigation type="secondary"}}
@@ -76,6 +79,8 @@
           <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
       </footer>
+        {{/is}}
+     
     </div>
 
     {{ ghost_foot }}
