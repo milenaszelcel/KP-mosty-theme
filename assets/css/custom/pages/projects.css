@@ -1,27 +1,24 @@
+#projects:target {
+  padding-top: 60px;
+}
+
 .project-image {
-  flex: 1 1 calc(33.33% - 20px); /* Każdy obrazek zajmuje około 1/3 szerokości wiersza */
-  max-width: 100%;
-  height: 50vh;
-  object-fit: cover;
   transition: transform 1000ms;
+  width: 100vw;
 }
 .projects-container {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
-
   justify-content: center;
+  height: auto;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1280px) {
   .project-image {
-    flex: 1 1 50%; /* Na tabletach dwa obrazy na wiersz */
-  }
-}
-
-@media (max-width: 480px) {
-  .project-image {
-    flex: 1 1 100%; /* Na telefonach jeden obraz na wiersz */
+    width: auto;
+    flex: 1 1 50%;
+    height: 50vh;
   }
 }
 
@@ -71,7 +68,7 @@ figure:is(:hover, :focus) figcaption {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
+
   position: relative;
   overflow: hidden;
 }

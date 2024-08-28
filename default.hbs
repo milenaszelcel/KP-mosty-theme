@@ -12,7 +12,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>{{ meta_title }}</title>
 
@@ -42,7 +45,7 @@
             </a>
           </div>
 
-          <div class="gh-head-menu burger-menu">
+          <div class="gh-head-menu navigation-menu">
             <div class="burger-container header-element">
               {{ navigation }}
             </div>
@@ -50,37 +53,30 @@
         </div>
 
         <div class="cover-container">
-          <img src="/assets/cover.jpg" alt="site-cover" class="site-cover" />
+          <img src="/assets/bridge.svg" alt="site-cover" class="site-cover" />
+          <div class="site-description">{{@site.description}}</div>
         </div>
       </header>
 
-      <main class="gh-main">
-        {{{body}}}
-      </main>
-        {{#is "kontakt"}}
-    <!-- Nie wyświetlaj stopki -->
-        {{else}}
-             <footer class="footer" id="footer">
-        <div class="gh-container">
-          <div class="gh-foot-menu">
-            {{navigation type="secondary"}}
+      <main class="gh-main">{{{body}}}</main>
+      {{#is "kontakt"}}
+      <!-- Nie wyświetlaj stopki -->
+      {{else}}
+      <footer class="footer" id="footer">
+        <div class="footer-container">
+          <div class="footer-contact-container">
+            {{> contact-block underlineState=""}}
           </div>
-
-          <div class="footer-container">
-            <div class="footer-contact-container">
-              {{> contact-block underlineState=""}}
-            </div>
-            {{#if @custom.biale_logo}}<img src="{{@custom.biale_logo}}" class="logo" />
-            {{/if}}
-          </div>
+          {{#if @custom.biale_logo}}<img src="{{@custom.biale_logo}}" class="logo" />
+          {{/if}}
         </div>
-        <div class="gh-foot-meta">
+
+        <div class="ghost-meta">
           Stworzone z pomocą
           <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
         </div>
       </footer>
-        {{/is}}
-     
+      {{/is}}
     </div>
 
     {{ ghost_foot }}

@@ -1,11 +1,10 @@
 {{!< default}}
-<div class="main-content" id="projekty">
+<div class="main-content" id="projects">
   <div class="container-centered container">
     {{#get "pages" limit="1" filter="tag:projects"}}
     {{#foreach pages}}
     <div class="title">
       {{ title }}
-      <hr class="underline" />
     </div>
 
     {{/foreach}}

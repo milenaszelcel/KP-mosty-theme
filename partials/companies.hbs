@@ -1,7 +1,6 @@
-{{#get "tags" limit="1" filter="slug:companies"}}
-{{#foreach tags}}
-<div><p class="gh-title title">{{ name }}</p>
-<hr class="underline" /></div>
+{{#get "pages" limit="1" filter="tag:companies"}}
+{{#foreach pages}}
+<div class="gh-title title">{{ title }}</div>
 
 {{/foreach}}
 {{/get}}
@@ -11,15 +10,12 @@
   {{#foreach posts}}
   {{#if feature_image}}
   {{#if title }}
-    <a href={{title}}>
-      <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
-    </a>
+  <a href="{{ title }}">
+    <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
+  </a>
   {{else}}
-   <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
+  <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
   {{/if}}
-    
-    {{!-- <div class="company-details">{{ content }}</div> --}}
- 
 
   {{#if feature_image_caption}}
   <figcaption>{{ feature_image_caption }}</figcaption>

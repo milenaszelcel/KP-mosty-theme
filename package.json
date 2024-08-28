@@ -71,7 +71,7 @@
         "default": "48+ 123 456 789",
         "group": "kontakt"
       },
-      "e-mail": {
+      "e_mail": {
         "type": "text",
         "default": "mail@mail.pl",
         "group": "kontakt"
@@ -81,7 +81,7 @@
         "default": "Fabryka czekolady",
         "group": "kontakt"
       },
-      "NIP": {
+      "nip": {
         "type": "text",
         "default": "123456",
         "group": "kontakt"
