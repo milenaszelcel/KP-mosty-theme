@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 56.5%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--color-base);
+  font-family: var(--font-base);
+  font-variant-numeric: lining-nums;
+  font-weight: var(--font-normal);
+  font-style: normal;
+  font-size: 1.5rem;
+  background: var(--color-bg);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p,
+ul,
+ol,
+li,
+dl,
+dd,
+hr,
+pre,
+form,
+table,
+video,
+figure,
+figcaption,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid currentcolor;
+  opacity: 0.2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+header a {
+  color: var(--color-base);
+}
+footer a {
+  color: var(--color-bg);
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+  -webkit-appearance: none;
+}

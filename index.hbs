@@ -1,34 +1,32 @@
 {{!< default}}
-<main class="gh-main">
-  <div class="gh-container main-content">
-    {{> about}}
+<main class="main-content">
+  {{> about}}
 
-    <div class="main-site-gallery">
-      {{#get "posts" filter="tags:projects" limit="2"}}
-      {{#foreach posts}}
+  <div class="main-site-gallery">
+    {{#get "posts" filter="tags:projects" limit="2"}}
+    {{#foreach posts}}
 
-      {{#if feature_image}}
+    {{#if feature_image}}
 
-      <img src="{{ feature_image }}" alt="{{ title }}" class="main-site-img" />
+    <img src="{{ feature_image }}" alt="{{ title }}" class="main-site-img" />
 
-      {{/if}}
+    {{/if}}
 
-      {{/foreach}}
-      {{/get}}
-    </div>
+    {{/foreach}}
+    {{/get}}
+  </div>
 
-    <div class="container-column container-centered container-background-white">
-      {{> companies limit="9"}}
-      <a href="/projekty/#projects" class="button">Zobacz projekty</a>
+  <div class="container-column container-centered container-background-white">
+    {{> companies limit="9"}}
+    <a href="/projekty/#projects" class="button">Zobacz projekty</a>
 
-      <div>
-        {{! If JS isn't enabled, fallback to standard pagination }}
-        <noscript>
-          <div class="gh-pagination">
-            {{ pagination }}
-          </div>
-        </noscript>
-      </div>
+    <div>
+      {{! If JS isn't enabled, fallback to standard pagination }}
+      <noscript>
+        <div class="gh-pagination">
+          {{ pagination }}
+        </div>
+      </noscript>
     </div>
   </div>
 </main>

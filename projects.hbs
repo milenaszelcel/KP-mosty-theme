@@ -17,7 +17,10 @@
     <div class="photo-container">
       <figure class="project-container">
         <img src="{{ feature_image }}" alt="{{ title }}" class="project-image" />
-        <figcaption class="project-title">{{ title }}</figcaption>
+        <figcaption class="project-content">
+          <div class="title-small">{{ title }}</div>
+          <div>{{ content }}</div>
+        </figcaption>
       </figure>
     </div>
 

@@ -1,7 +1,7 @@
 /* about */
 .name-surname {
   color: var(--color-text);
-  font-weight: 700;
+  font-weight: var(--font-bold);
   text-wrap: nowrap;
   margin-bottom: 20px;
   font-size: 4.8rem;

@@ -7,9 +7,8 @@
   background-color: var(--color-base);
   padding: 8vmin 4vmin 4vmin;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  color: white;
+  color: var(--color-bg);
 }
 
 @media (max-width: 768px) {
@@ -30,4 +29,5 @@
 
 .ghost-meta {
   padding: 24px;
+  text-align: center;
 }

@@ -25,8 +25,8 @@
   </head>
 
   <body class="{{ body_class }} body">
-    <div class="gh-viewport">
-      <header id="gh-head" class="gh-head header">
+    <div class="page-view">
+      <header class="header">
         <div class="header-navigation">
           <div class="logo-burger-button-container">
             <div class="logo">
@@ -38,14 +38,14 @@
                 {{/if}}
               </a>
             </div>
-            <a class="gh-burger burger-button" role="button" aria-label="menu">
-              <div class="gh-burger-box">
-                <div class="gh-burger-inner"></div>
+            <a class="burger-button" role="button" aria-label="menu">
+              <div class="burger-box">
+                <div class="burger-inner"></div>
               </div>
             </a>
           </div>
 
-          <div class="gh-head-menu navigation-menu">
+          <div class="head-menu navigation-menu">
             <div class="burger-container header-element">
               {{ navigation }}
             </div>
@@ -58,7 +58,7 @@
         </div>
       </header>
 
-      <main class="gh-main">{{{body}}}</main>
+      <main class="-main">{{{body}}}</main>
       {{#is "kontakt"}}
       <!-- Nie wyświetlaj stopki -->
       {{else}}

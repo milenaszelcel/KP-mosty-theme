@@ -8,7 +8,7 @@
 
 .contact-content {
   background-color: var(--color-base);
-  color: white;
+  color: var(--color-bg);
   padding: 64px;
 }
 
@@ -21,7 +21,7 @@
 }
 .contact-banner {
   font-size: 4.2rem;
-  font-weight: 700;
+  font-weight: var(--font-bold);
 }
 
 .line {
