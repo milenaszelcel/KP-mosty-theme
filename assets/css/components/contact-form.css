@@ -12,6 +12,7 @@
   flex-direction: column;
   gap: 20px;
   flex-grow: 0.5;
+  width: 100%;
 }
 .contact-form-button {
   background-color: transparent;
@@ -45,4 +46,10 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .form-container {
+    width: auto;
+  }
 }

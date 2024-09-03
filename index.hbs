@@ -16,17 +16,16 @@
     {{/get}}
   </div>
 
-  <div class="container-column container-centered container-background-white">
-    {{> companies limit="9"}}
-    <a href="/projekty/#projects" class="button">Zobacz projekty</a>
+  <div class="container container-column container-centered container-background-white">
+    {{#get "pages" limit="1" filter="tag:companies"}}
+    {{#foreach pages}}
+    <div class="container-column container-centered container-background-white">
+      <div class="title title-start">{{ title }}</div>
 
-    <div>
-      {{! If JS isn't enabled, fallback to standard pagination }}
-      <noscript>
-        <div class="gh-pagination">
-          {{ pagination }}
-        </div>
-      </noscript>
+      {{/foreach}}
+      {{/get}}
+      {{> companies limit="9"}}
+      <a href="/projekty/#projects" class="button">Zobacz projekty</a>
     </div>
   </div>
 </main>

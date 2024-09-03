@@ -3,7 +3,7 @@
 
 :root {
   /* Colours */
-  --color-primary: var(--ghost-accent-color, #3eb0ef);
+  --color-primary: var(--ghost-accent-color, #3c94d9);
   --color-base: #1f2024;
   --color-text: #3c94d9;
   --color-border: #464646;
@@ -12,7 +12,7 @@
 
   /* Fonts */
   --font-base: 'Raleway', sans-serif;
-  --font-light: 200;
+  --font-light: 300;
   --font-normal: 400;
   --font-bold: 700;
   --font-heavy: 800;

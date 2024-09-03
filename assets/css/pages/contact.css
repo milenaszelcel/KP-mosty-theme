@@ -1,9 +1,5 @@
 #contact:target {
-  padding-top: 100px;
-}
-
-.contact-box {
-  font-size: 2.4rem;
+  padding-top: 200px;
 }
 
 .contact-content {
@@ -14,37 +10,38 @@
 
 .contact-sides {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 80px;
+  gap: 40px;
 }
 .contact-banner {
-  font-size: 4.2rem;
+  font-size: 4.8rem;
   font-weight: var(--font-bold);
 }
 
 .line {
-  display: inline-block;
-  width: 2px;
-  height: 540px;
-  background-color: var(--color-primary);
+  display: none;
 }
 .contact-box {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 64px;
+  font-size: 2.4rem;
 }
 .contact-logo {
   width: 24vh;
 }
 
-@media (max-width: 784px) {
+@media (min-width: 992px) {
   .contact-sides {
-    flex-direction: column;
+    flex-direction: row;
   }
   .line {
-    display: none;
+    display: inline-block;
+    width: 2px;
+    height: 540px;
+    background-color: var(--color-primary);
   }
 }

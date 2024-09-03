@@ -1,6 +1,6 @@
 {{!< default}}
 <div class="main-content" id="projects">
-  <div class="container-centered container">
+  <div class="container-centered container-column">
     {{#get "pages" limit="1" filter="tag:projects"}}
     {{#foreach pages}}
     <div class="title">
@@ -9,27 +9,33 @@
 
     {{/foreach}}
     {{/get}}
-  </div>
-  <div class="projects-container">
-    {{#get "posts" filter="tags:projects"}}
-    {{#foreach posts}}
-    {{#if feature_image}}
-    <div class="photo-container">
-      <figure class="project-container">
-        <img src="{{ feature_image }}" alt="{{ title }}" class="project-image" />
-        <figcaption class="project-content">
-          <div class="title-small">{{ title }}</div>
-          <div>{{ content }}</div>
-        </figcaption>
-      </figure>
-    </div>
 
-    {{/if}}
+    <div class="projects-container">
+      {{#get "posts" filter="tags:projects"}}
+      {{#foreach posts}}
+      {{#if feature_image}}
+      <div class="photo-container">
+        <figure class="project-container">
+          <img src="{{ feature_image }}" alt="{{ title }}" class="project-image" />
+          <figcaption class="project-content">
+            <div class="title-small">{{ title }}</div>
+            <div>{{ content }}</div>
+          </figcaption>
+        </figure>
+      </div>
+
+      {{/if}}
+      {{/foreach}}
+      {{/get}}
+    </div>
+  </div>
+  {{#get "pages" limit="1" filter="tag:companies"}}
+  {{#foreach pages}}
+  <div class="container container-column container-centered container-background-white">
+    <div class="title">{{ title }}</div>
+
     {{/foreach}}
     {{/get}}
-  </div>
-
-  <div class="container-column container-centered">
     {{> companies limit=1000}}
   </div>
 </div>

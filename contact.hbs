@@ -4,9 +4,10 @@
     {{> contact-form }}
     <span class="line"></span>
     <div class="contact-box">
-      {{> contact-block underlineState="with-line" color="beige"}}
+      {{> contact-block underlineState="with-line" }}
       {{#if @custom.biale_logo}}<img src="{{@custom.biale_logo}}" class="contact-logo" />
       {{/if}}
     </div>
+    {{> notification  message="Wysłano wiadmość"}}
   </div>
 </div>

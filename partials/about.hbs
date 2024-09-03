@@ -2,20 +2,31 @@
 {{#get "pages" filter="tag:about" limit="1"}}
 {{#foreach pages}}
 <div class="container">
-  {{#if @custom.imie_i_nazwisko}}
-  <div class="name-surname">
-    {{@custom.imie_i_nazwisko}}
-  </div>
-  {{/if}}
-  <div class="container-column">
-    <div class="title">{{ title }}</div>
-
-    <div class="about-card">
-      <div class="right-card-side">
-        <div class="about-content">{{ content }}</div>
-      </div>
+  <div class="about-content-container">
+    {{#if @custom.imie_i_nazwisko}}
+    <div class="name-surname">
+      {{@custom.imie_i_nazwisko}}
     </div>
-    <a href="/kontakt/#contact" class="button">Kontakt</a>
+    {{/if}}
+
+    <div class="container-column">
+      <div class="title">{{ title }}</div>
+
+      <div class="about-card">
+        <div class="right-card-side">
+          <div class="about-content">{{ content }}</div>
+        </div>
+      </div>
+
+      <a href="/kontakt/#contact" class="button">Kontakt</a>
+    </div>
+    {{#if @custom.moje_zdjecie}}
+
+    <div class="profile-container">
+      <img src="{{ @custom.moje_zdjecie }}" alt="" class="about-photo" />
+    </div>
+
+    {{/if}}
   </div>
 </div>
 

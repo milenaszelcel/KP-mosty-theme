@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="{{asset 'built/index.css'}}" />
     <script src="{{asset 'built/index.js'}}" defer></script>
-    <link rel="icon" type="image/x-icon" href="{{@site.logo}}" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.PNG" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,12 +53,12 @@
         </div>
 
         <div class="cover-container">
-          <img src="/assets/bridge.svg" alt="site-cover" class="site-cover" />
+          <img src={{@site.cover_image}} alt="site-cover" class="site-cover" />
           <div class="site-description">{{@site.description}}</div>
         </div>
       </header>
 
-      <main class="-main">{{{body}}}</main>
+      <main class="main">{{{body}}}</main>
       {{#is "kontakt"}}
       <!-- Nie wyświetlaj stopki -->
       {{else}}

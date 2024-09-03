@@ -1,18 +1,16 @@
-{{#get "pages" limit="1" filter="tag:companies"}}
-{{#foreach pages}}
-<div class="title">{{ title }}</div>
-
-{{/foreach}}
-{{/get}}
 <figure class="company-list">
   {{#get "posts" filter="tags:companies" limit=limit }}
 
   {{#foreach posts}}
   {{#if feature_image}}
   {{#if title }}
-  <a href="{{ title }}">
-    <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
-  </a>
+  <div class="comapny-box">
+    <div class="company-container">
+      <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
+      <div class="company-content">{{ title }}</div>
+    </div>
+  </div>
+
   {{else}}
   <img class="company-image" src="{{ feature_image }}" alt="{{ title }}" />
   {{/if}}

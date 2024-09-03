@@ -4,6 +4,7 @@
   grid-template-columns: 1fr 2fr;
   gap: 24px;
   align-items: center;
+  width: 100%;
 }
 
 @media (max-width: 480px) {
@@ -29,11 +30,6 @@
   flex-direction: column;
   gap: 30px;
   color: var(--color-bg);
-}
-@media (max-width: 784px) {
-  .contact-element {
-    grid-template-columns: repeat(auto-fit, 186px);
-  }
 }
 
 .contact-item a {

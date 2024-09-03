@@ -1,10 +1,11 @@
 #projects:target {
-  padding-top: 60px;
+  padding-top: 120px;
 }
 
 .project-image {
   transition: transform 1000ms;
   width: 100vw;
+  flex: 1 1 50%;
 }
 .projects-container {
   display: flex;
@@ -19,6 +20,7 @@
     width: auto;
     flex: 1 1 50%;
     height: 50vh;
+    width: 75vh;
   }
 }
 
@@ -52,6 +54,7 @@ figure:is(:hover, :focus) figcaption {
 }
 .title-small {
   font-weight: var(--font-heavy);
+  font-size: 1.8rem;
 }
 
 .project-container::after {
@@ -70,14 +73,9 @@ figure:is(:hover, :focus) figcaption {
 }
 
 .project-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   position: relative;
   overflow: hidden;
 }
-/* projects */
 .projects-content {
   display: flex;
   flex-direction: column;
