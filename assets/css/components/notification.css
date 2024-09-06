@@ -18,6 +18,7 @@
 
 .notification-content {
   position: relative;
+  padding: 32px;
 }
 
 .close-button {
@@ -30,6 +31,10 @@
   padding: 4px;
 }
 .notification-text {
-  padding: 24px 48px;
   font-size: 2rem;
+}
+
+.notification-message {
+  display: flex;
+  gap: 10px;
 }
