@@ -63,12 +63,12 @@
     "custom": {
       "imie_i_nazwisko": {
         "type": "text",
-        "default": "Bruno Patyk",
+        "default": "Kamil Ślimak",
         "group": "kontakt"
       },
       "numer_telefonu": {
         "type": "text",
-        "default": "48+ 123 456 789",
+        "default": "+48 123 456 789",
         "group": "kontakt"
       },
       "e_mail": {
@@ -78,7 +78,7 @@
       },
       "adres": {
         "type": "text",
-        "default": "Fabryka czekolady",
+        "default": "ul. Fabryczna, 42-434 Fabryka czekolady",
         "group": "kontakt"
       },
       "nip": {
