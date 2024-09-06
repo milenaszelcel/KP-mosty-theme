@@ -16,16 +16,16 @@
     {{/get}}
   </div>
 
-  <div class="container container-column container-centered container-background-white">
+  <div class="container container-column container-centered">
     {{#get "pages" limit="1" filter="tag:companies"}}
     {{#foreach pages}}
-    <div class="container-column container-centered container-background-white">
+    <div class="container-column companies-container">
       <div class="title title-start">{{ title }}</div>
 
       {{/foreach}}
       {{/get}}
-      {{> companies limit="9"}}
-      <a href="/projekty/#projects" class="button">Zobacz projekty</a>
+      {{> companies limit="8"}}
+      <a href="/projekty" class="button align-end">Zobacz projekty</a>
     </div>
   </div>
 </main>

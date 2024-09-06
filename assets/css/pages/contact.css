@@ -1,4 +1,4 @@
-#contact:target {
+#contact {
   padding-top: 200px;
 }
 
@@ -6,6 +6,7 @@
   background-color: var(--color-base);
   color: var(--color-bg);
   padding: 64px;
+  min-height: 100vh;
 }
 
 .contact-sides {
@@ -13,7 +14,8 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 40px;
+
+  gap: 80px;
 }
 .contact-banner {
   font-size: 4.8rem;
@@ -37,6 +39,7 @@
 @media (min-width: 992px) {
   .contact-sides {
     flex-direction: row;
+    gap: 40px;
   }
   .line {
     display: inline-block;

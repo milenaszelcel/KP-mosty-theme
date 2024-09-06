@@ -5,6 +5,7 @@
   padding: 10px;
   border-radius: 15px;
   width: 100%;
+  font-size: 1.6rem;
 }
 
 .form-container {
@@ -26,7 +27,7 @@
 
 .contact-form-button:hover {
   background-color: var(--color-primary);
-  color: var(--color-base);
+  color: var(--color-bg);
 }
 
 .contact-form {

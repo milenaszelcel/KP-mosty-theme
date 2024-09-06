@@ -99,6 +99,17 @@
       "moje_zdjecie": {
         "type": "image",
         "group": "about"
+      },
+      "ulozenie_napisu": {
+        "type": "select",
+        "default": "lewo-srodek",
+        "options": [
+          "lewo-srodek",
+          "lewo-dol",
+          "srodek",
+          "prawo-srodek",
+          "prawo-dol"
+        ]
       }
     },
     "card_assets": true,

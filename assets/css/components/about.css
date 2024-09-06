@@ -3,16 +3,21 @@
   color: var(--color-primary);
   font-weight: var(--font-bold);
   text-wrap: nowrap;
-  margin-bottom: 20px;
-  font-size: 5.8rem;
+  font-size: 3.2rem;
   transition: 1s ease;
+}
+@media (min-width: 320px) {
+  .name-surname {
+    font-size: 5.8rem;
+  }
 }
 
 .about-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 64px;
+  gap: 30px;
+  padding: 20px;
 }
 
 .about-card {
@@ -35,34 +40,34 @@
 }
 
 .profile-container {
-  position: relative;
   flex-shrink: 0;
   order: -1;
 }
 
+.about-photo,
+.profile-background {
+  max-width: 300px;
+  width: 60vw;
+  max-height: 300px;
+  height: 60vw;
+  transition: 1s ease;
+}
 .about-photo {
-  position: relative;
   border-radius: 20px;
   z-index: 2;
   object-fit: cover;
-  max-width: 400px;
-  width: 80vw;
-  max-height: 400px;
-  height: 80vw;
+  box-shadow: 16px 16px 0px 0px var(--color-primary);
+  right: 16px;
+  bottom: 16px;
 }
-.profile-container::before {
-  content: '';
-  position: absolute;
-
-  top: 16px;
-  left: 16px;
-  max-width: 400px;
-  width: 80vw;
-  max-height: 400px;
-  height: 80vw;
-  background-color: var(--color-primary); /* Kolor niebieskiej warstwy */
-  border-radius: 20px; /* Zaokrąglenie rogów */
-  z-index: 1;
+@media (min-width: 480px) {
+  .about-photo,
+  .profile-background {
+    max-width: 400px;
+    width: 80vw;
+    max-height: 400px;
+    height: 80vw;
+  }
 }
 
 .about-personal-container {
@@ -72,9 +77,11 @@
   gap: 60px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .about-content-container {
     flex-direction: row;
+
+    gap: 128px;
   }
   .profile-container {
     order: 0;

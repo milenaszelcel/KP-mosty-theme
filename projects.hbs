@@ -1,6 +1,7 @@
 {{!< default}}
+
 <div class="main-content" id="projects">
-  <div class="container-centered container-column">
+  <div class="container-column container-centered">
     {{#get "pages" limit="1" filter="tag:projects"}}
     {{#foreach pages}}
     <div class="title">
@@ -29,13 +30,20 @@
       {{/get}}
     </div>
   </div>
+
   {{#get "pages" limit="1" filter="tag:companies"}}
   {{#foreach pages}}
-  <div class="container container-column container-centered container-background-white">
-    <div class="title">{{ title }}</div>
+  <div class="container container-column container-centered">
+    <div class="container-column companies-container">
+      <div class="title">{{ title }}</div>
 
-    {{/foreach}}
-    {{/get}}
-    {{> companies limit=1000}}
+      {{/foreach}}
+      {{/get}}
+      <div class="companies-button-container">
+        {{> companies limit=1000}}
+
+        <a class="button" href="/kontakt/#contact">Skontaktuj sie z nami</a>
+      </div>
+    </div>
   </div>
 </div>

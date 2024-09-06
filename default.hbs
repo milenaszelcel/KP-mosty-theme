@@ -26,6 +26,7 @@
 
   <body class="{{ body_class }} body">
     <div class="page-view">
+      
       <header class="header">
         <div class="header-navigation">
           <div class="logo-burger-button-container">
@@ -51,12 +52,17 @@
             </div>
           </div>
         </div>
-
-        <div class="cover-container">
+        {{#is "projekty, kontakt"}}
+      {{!-- bez covera--}}
+      {{else}}
+        
+        <div class="cover-container ">
           <img src={{@site.cover_image}} alt="site-cover" class="site-cover" />
-          <div class="site-description">{{@site.description}}</div>
+          <div class="site-description {{@custom.ulozenie_napisu}}">{{@site.description}}</div>
         </div>
+        {{/is}}
       </header>
+      
 
       <main class="main">{{{body}}}</main>
       {{#is "kontakt"}}
