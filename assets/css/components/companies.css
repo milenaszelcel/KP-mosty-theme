@@ -4,8 +4,14 @@
   flex-direction: row;
   max-width: calc(160px * 8 + 7 * 24px);
   flex-wrap: wrap;
-
+  justify-content: center;
   gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .company-list {
+    justify-content: flex-start;
+  }
 }
 
 .company-image {
@@ -97,5 +103,11 @@
 @media (min-width: 420px) {
   .companies-container {
     --g: 64px; /* the gap*/
+  }
+}
+
+@media (min-width: 1280px) {
+  .companies-container {
+    padding: 32px 128px;
   }
 }
