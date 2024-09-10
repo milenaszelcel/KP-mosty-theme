@@ -42,3 +42,13 @@
   text-underline-offset: 6px;
   color: var(--color-bg);
 }
+.contact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contact-item {
+    flex-direction: row;
+  }
+}

@@ -85,7 +85,7 @@
 /* default title*/
 .title {
   font-size: 3.8rem;
-  padding: 16px;
+  padding: 16px 0px;
   font-style: normal;
   color: var(--color-base);
   font-weight: var(--font-bold);

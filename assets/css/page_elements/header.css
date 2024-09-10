@@ -60,11 +60,11 @@
 }
 @media (min-width: 320px) {
   .lewo-srodek {
-    bottom: 20vh;
+    bottom: 40vh;
     left: 0;
   }
   .prawo-srodek {
-    bottom: 20vh;
+    bottom: 40vh;
     right: 0;
   }
 }

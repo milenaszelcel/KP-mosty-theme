@@ -35,8 +35,13 @@
       <div class="contact-label">Adres</div>
     </div>
 
-    {{#if @custom.adres}}
-    <div class="contact-item">{{@custom.adres}}</div>
+    {{#if @custom.ulica_i_numer_domu}}
+    {{#if @custom.kod_pocztowy_i_miejscowosc}}
+    <div class="contact-item">
+      <span>{{@custom.ulica_i_numer_domu}},</span>
+      <span>{{@custom.kod_pocztowy_i_miejscowosc}}</span>
+    </div>
+    {{/if}}
     {{/if}}
   </div>
   {{#if underlineState}}

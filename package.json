@@ -76,9 +76,14 @@
         "default": "mail@mail.pl",
         "group": "kontakt"
       },
-      "adres": {
+      "ulica_i_numer_domu": {
         "type": "text",
-        "default": "ul. Fabryczna, 42-434 Fabryka czekolady",
+        "default": "ul. Fabryczna 32",
+        "group": "kontakt"
+      },
+      "kod_pocztowy_i_miejscowosc": {
+        "type": "text",
+        "default": "42-434 Fabryka czekolady",
         "group": "kontakt"
       },
       "nip": {
@@ -95,10 +100,6 @@
         "default": "123545",
         "type": "text",
         "group": "kontakt"
-      },
-      "moje_zdjecie": {
-        "type": "image",
-        "group": "about"
       },
       "ulozenie_napisu": {
         "type": "select",
