@@ -15,7 +15,7 @@
       {{#get "posts" filter="tags:projects"}}
       {{#foreach posts}}
       {{#if feature_image}}
-      <div class="photo-container">
+      <div class="photo-container" tabindex="0">
         <figure class="project-container">
           <img src="{{ feature_image }}" alt="{{ title }}" class="project-image" />
           <figcaption class="project-content">
@@ -37,10 +37,11 @@
     <div class="container-column companies-container">
       <div class="title">{{ title }}</div>
 
-      {{/foreach}}
-      {{/get}}
       {{> companies limit=1000}}
       <a class="button align-end" href="/kontakt/#contact">Skontaktuj sie z nami</a>
     </div>
+
+    {{/foreach}}
+    {{/get}}
   </div>
 </div>

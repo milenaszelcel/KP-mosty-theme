@@ -22,10 +22,11 @@
     <div class="container-column companies-container">
       <div class="title title-start">{{ title }}</div>
 
-      {{/foreach}}
-      {{/get}}
       {{> companies limit="8"}}
+
       <a href="/projekty" class="button align-end">Zobacz projekty</a>
     </div>
+    {{/foreach}}
+    {{/get}}
   </div>
 </main>

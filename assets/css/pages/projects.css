@@ -32,7 +32,11 @@ figure:is(:hover, :focus) figcaption {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
-
+@media (min-width: 768px) {
+  .project-content {
+    padding: 128px;
+  }
+}
 .project-content {
   position: absolute;
   top: 0;
@@ -48,8 +52,7 @@ figure:is(:hover, :focus) figcaption {
   color: var(--color-bg);
   z-index: 1;
   opacity: 0;
-  padding: 128px;
-
+  padding: 32px;
   transition:
     opacity 600ms,
     transform 600ms;

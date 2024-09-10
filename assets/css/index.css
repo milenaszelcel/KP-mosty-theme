@@ -51,8 +51,10 @@
 
   background-color: var(--color-bg);
 }
-.align-end {
-  align-self: flex-end;
+@media (min-width: 768px) {
+  .align-end {
+    align-self: flex-end;
+  }
 }
 
 .button:hover {
@@ -65,7 +67,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
 
   gap: 32px;
 }
@@ -83,8 +84,8 @@
 }
 /* default title*/
 .title {
-  font-size: 3.2rem;
-
+  font-size: 3.6rem;
+  padding: 16px;
   font-style: normal;
   color: var(--color-base);
   font-weight: var(--font-bold);
@@ -120,9 +121,6 @@
   align-items: center;
 }
 
-.title-start {
-  align-self: flex-start;
-}
 .main-content {
   display: flex;
   align-items: center;

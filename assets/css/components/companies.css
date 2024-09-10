@@ -85,7 +85,7 @@
 }
 
 .companies-container {
-  --b: 8px; /* border thickness*/
+  --b: 6px; /* border thickness*/
   --s: 64px; /* size of the corner*/
   --g: 32px; /* the gap*/
   --c: var(--color-primary);
@@ -103,6 +103,7 @@
 @media (min-width: 420px) {
   .companies-container {
     --g: 64px; /* the gap*/
+    --b: 8px;
   }
 }
 
