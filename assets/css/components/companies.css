@@ -87,7 +87,7 @@
 .companies-container {
   --b: 6px; /* border thickness*/
   --s: 64px; /* size of the corner*/
-  --g: 32px; /* the gap*/
+  --g: 16px; /* the gap*/
   --c: var(--color-primary);
 
   padding: calc(var(--b) + var(--g));
