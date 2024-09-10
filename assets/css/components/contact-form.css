@@ -1,5 +1,5 @@
 .contact-form-label {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   padding: 0px 4px;
 }
 .contact-input {
@@ -39,6 +39,9 @@
   gap: 18px;
 }
 
+.contact-banner {
+  font-size: 4.6rem;
+}
 .text-area {
   width: 100%;
   resize: none;
