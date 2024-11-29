@@ -58,7 +58,15 @@
         
         <div class="cover-container ">
           <img src={{@site.cover_image}} alt="site-cover" class="site-cover" />
-          <div class="site-description {{@custom.ulozenie_napisu}}">{{@site.description}}</div>
+           {{#get "pages" limit="1" filter="tag:site-description"}}
+              {{#foreach pages}}
+              <div class="site-description {{@custom.ulozenie_napisu}}">
+               <div class="site-description-title">{{title}}</div>
+               <div>{{content}}</div>
+              </div>
+              
+               {{/foreach}}
+            {{/get}}
         </div>
         {{/is}}
       </header>

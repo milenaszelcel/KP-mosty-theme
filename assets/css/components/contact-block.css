@@ -42,6 +42,10 @@
   text-underline-offset: 6px;
   color: var(--color-bg);
 }
+
+.contact-value {
+  text-align: right;
+}
 .contact-item {
   display: flex;
   flex-direction: column;

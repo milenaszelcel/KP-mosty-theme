@@ -34,13 +34,17 @@
 .about-content {
   font-size: 2.4rem;
   line-height: 4rem;
-  text-align: start;
+  text-align: justify;
   text-wrap: wrap;
 }
 
 .profile-container {
   flex-shrink: 0;
   order: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .about-photo,
@@ -79,8 +83,7 @@
 @media (min-width: 1440px) {
   .about-content-container {
     flex-direction: row;
-
-    gap: 128px;
+    gap: 64px;
   }
   .profile-container {
     order: 0;

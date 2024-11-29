@@ -63,32 +63,32 @@
     "custom": {
       "imie_i_nazwisko": {
         "type": "text",
-        "default": "Kamil Ślimak",
+        "default": "Karol Patyk",
         "group": "kontakt"
       },
       "numer_telefonu": {
         "type": "text",
-        "default": "+48 123 456 789",
+        "default": "+48 889 558 987",
         "group": "kontakt"
       },
       "e_mail": {
         "type": "text",
-        "default": "mail@mail.pl",
+        "default": "kp.mosty@interia.pl",
         "group": "kontakt"
       },
       "ulica_i_numer_domu": {
         "type": "text",
-        "default": "ul. Fabryczna 32",
+        "default": "Żabiniec 8",
         "group": "kontakt"
       },
       "kod_pocztowy_i_miejscowosc": {
         "type": "text",
-        "default": "42-434 Fabryka czekolady",
+        "default": "46-243 Żabiniec",
         "group": "kontakt"
       },
       "nip": {
         "type": "text",
-        "default": "39438904",
+        "default": "751 178 65 48",
         "group": "kontakt"
       },
       "biale_logo": {

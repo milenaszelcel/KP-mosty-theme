@@ -15,14 +15,14 @@
       {{#get "posts" filter="tags:projects"}}
       {{#foreach posts}}
       {{#if feature_image}}
-      <div class="photo-container" tabindex="0">
-        <figure class="project-container">
+      <div class="project-box" tabindex="0">
+        <div class="project-container">
           <img src="{{ feature_image }}" alt="{{ title }}" class="project-image" />
-          <figcaption class="project-content">
+          <div class="project-content">
             <div class="title-small">{{ title }}</div>
             <div>{{ content }}</div>
-          </figcaption>
-        </figure>
+          </div>
+        </div>
       </div>
 
       {{/if}}

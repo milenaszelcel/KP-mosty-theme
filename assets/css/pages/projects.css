@@ -24,42 +24,65 @@
   }
 }
 
-.photo-container:is(:hover, :focus) figure::after {
+/* Reset styles when hover or focus ends */
+.project-content {
+  opacity: 0; /* Ensure text is hidden by default */
+  transform: translate3d(0, 10px, 0); /* Set a default offset for animations */
+  transition:
+    opacity 600ms,
+    transform 600ms;
+}
+
+.project-container::after {
+  opacity: 0; /* Default state */
+  transform: scale(2); /* Default state */
+  transition:
+    opacity 300ms,
+    transform 300ms;
+}
+
+/* Handle persistent focus states */
+.project-container:focus:not(:hover) .project-content {
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+}
+
+.project-container:focus:not(:hover)::after {
+  opacity: 0;
+  transform: scale(2);
+}
+
+.project-box:is(:hover, :focus) .project-container::after {
   opacity: 1;
 }
 
-figure:is(:hover, :focus) figcaption {
+.project-container:is(:hover, :focus) .project-content {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
-@media (min-width: 768px) {
-  .project-content {
-    padding: 128px;
-  }
-}
+
 .project-content {
   position: absolute;
+  color: var(--color-bg);
+  font-weight: var(--font-bold);
   top: 0;
   left: 0;
   display: flex;
+  padding: 4px;
+  font-size: 1.6rem;
   justify-content: center;
   flex-direction: column;
   place-items: center;
   text-align: center;
   gap: 8px;
+  padding: 20px;
   width: 100%;
   height: 100%;
-  color: var(--color-bg);
   z-index: 1;
   opacity: 0;
-  padding: 32px;
   transition:
     opacity 600ms,
     transform 600ms;
-}
-.title-small {
-  font-weight: var(--font-heavy);
-  font-size: 1.8rem;
 }
 
 .project-container::after {
@@ -69,26 +92,33 @@ figure:is(:hover, :focus) figcaption {
   left: 50%;
   width: 200%;
   height: 200%;
-
   background: rgba(0, 0, 0, 0.5);
-  /* background-color: rgb(from var(--color-primary) r g b / 0.); */
   transform-origin: center;
   display: flex;
   opacity: 0;
   transform: scale(2);
   transition: opacity 300ms;
 }
+.project-container:not(:hover):not(:focus)::after {
+  opacity: 0;
+  transform: scale(2);
+}
 
 .project-container {
   position: relative;
   overflow: hidden;
 }
+
 .projects-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.title-small {
+  font-weight: var(--font-heavy);
+  font-size: 1.8rem;
+}
 .companies-button-container {
   display: flex;
   align-items: center;
