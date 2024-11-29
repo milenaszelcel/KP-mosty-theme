@@ -114,7 +114,7 @@
 }
 
 .companies-container {
-  --b: 6px; /* border thickness*/
+  --b: 0px; /* border thickness*/
   --s: 64px; /* size of the corner*/
   --g: 0px; /* the gap*/
   --c: var(--color-primary);
@@ -130,8 +130,7 @@
 
 @media (min-width: 420px) {
   .companies-container {
-    --g: 64px; /* the gap*/
-    --b: 8px;
+    --b: 6px; /* border thickness*/
   }
   .company-content {
     font-size: 1.6rem;

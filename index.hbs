@@ -19,11 +19,16 @@
     <div class="container-column container-centered">
       {{#get "pages" limit="1" filter="tag:companies"}}
       {{#foreach pages}}
-      <div class="container-column companies-container">
+      <div class="container-column companies-container padding">
         <div class="title title-start">{{ title }}</div>
 
         {{> companies limit="8"}}
+
+        {{#if @custom.czy_projekty_widoczne}}
         <a href="/projekty" class="button align-end">Zobacz projekty</a>
+        {{else}}
+        <a href="/kontakt" class="button align-end">Skontaktuj się z nami</a>
+        {{/if}}
       </div>
       {{/foreach}}
       {{/get}}

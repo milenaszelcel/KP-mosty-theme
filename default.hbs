@@ -16,12 +16,20 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
+    
     <title>{{ meta_title }}</title>
 
+      
+   
     {{
       ghost_head
     }}
+     <style>
+        :root {
+            --color-description: {{@custom.kolor_tla_opisu_strony}};
+            --color-description-text: {{@custom.kolor_tekstu_opisu_strony}};
+        }
+      </style>
   </head>
 
   <body class="{{ body_class }} body">

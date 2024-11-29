@@ -73,18 +73,20 @@
 
 .site-description {
   position: absolute;
-  color: var(--color-base);
+  color: var(--color-description-text);
   font-size: 3rem;
   text-wrap: wrap;
   max-width: 700px;
   width: 100vw;
-  background-color: rgb(from var(--color-bg) r g b / 0.8);
+  background-color: var(--color-description); /* Twój kolor HEX */
+  opacity: 0.8;
   padding: 32px;
   line-height: 5rem;
   overflow: hidden;
   display: block;
   gap: 8px;
 }
+
 .site-description-title {
   font-weight: var(--font-bold);
   font-size: 4rem;

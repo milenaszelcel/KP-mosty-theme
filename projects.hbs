@@ -12,7 +12,7 @@
     {{/get}}
 
     <div class="projects-container">
-      {{#get "posts" filter="tags:projects"}}
+      {{#get "posts" filter="tags:projects" order="featured desc, published_at desc"}}
       {{#foreach posts}}
       {{#if feature_image}}
       <div class="project-box" tabindex="0">

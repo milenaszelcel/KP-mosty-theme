@@ -61,6 +61,27 @@
   ],
   "config": {
     "custom": {
+      "ulozenie_napisu": {
+        "type": "select",
+        "default": "lewo-srodek",
+        "options": [
+          "lewo-srodek",
+          "lewo-dol",
+          "srodek",
+          "prawo-srodek",
+          "prawo-dol"
+        ]
+      },
+      "kolor_tla_opisu_strony": {
+        "type": "color",
+        "default": "#ffffff",
+        "group": "opcje"
+      },
+      "kolor_tekstu_opisu_strony": {
+        "type": "color",
+        "default": "#000000",
+        "group": "opcje"
+      },
       "imie_i_nazwisko": {
         "type": "text",
         "default": "Karol Patyk",
@@ -101,16 +122,9 @@
         "type": "text",
         "group": "kontakt"
       },
-      "ulozenie_napisu": {
-        "type": "select",
-        "default": "lewo-srodek",
-        "options": [
-          "lewo-srodek",
-          "lewo-dol",
-          "srodek",
-          "prawo-srodek",
-          "prawo-dol"
-        ]
+      "czy_projekty_widoczne": {
+        "default": true,
+        "type": "boolean"
       }
     },
     "card_assets": true,

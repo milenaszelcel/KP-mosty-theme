@@ -81,6 +81,10 @@
   align-items: stretch;
   gap: 32px;
 }
+
+.padding {
+  padding: 32px;
+}
 /* default title*/
 .title {
   font-size: 3.8rem;
