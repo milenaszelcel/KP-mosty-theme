@@ -3,7 +3,7 @@
   {{> about}}
 
   <div class="main-site-gallery">
-    {{#get "posts" filter="tags:projects" limit="2"}}
+    {{#get "posts" filter="tags:projects" limit="2"  order="featured desc, published_at desc"}}
     {{#foreach posts}}
 
     {{#if feature_image}}
