@@ -1,6 +1,7 @@
 /* index-content */
 .main-site-gallery {
   flex-direction: column;
+  max-width: 100vw;
 }
 .main-site-img {
   width: 100vw;
@@ -13,6 +14,6 @@
     flex-direction: row;
   }
   .main-site-img {
-    width: 50vw;
+    width: 50%;
   }
 }

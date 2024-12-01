@@ -3,29 +3,28 @@
 {{#foreach pages}}
 <div class="container">
   <div class="about-content-container">
-    {{#if @custom.imie_i_nazwisko}}
-    <div class="name-surname">
-      {{@custom.imie_i_nazwisko}}
-    </div>
-    {{/if}}
-
     <div class="container-column">
-      <div class="title">{{ title }}</div>
+      <div class="title about-title">{{ title }}</div>
 
       <div class="about-card">
-        <div class="right-card-side">
-          <div class="about-content">{{ content }}</div>
+        <div class="card-row">
+          <div>
+            <div class="about-content">{{ content }}</div>
+            <div class="name-and-button-box">
+              {{#if @custom.imie_i_nazwisko}}
+              <div class="name-surname">
+                {{@custom.imie_i_nazwisko}}
+              </div>
+              {{/if}}
+              <a href="/kontakt" class="button about-button">Kontakt</a>
+            </div>
+          </div>
+          <div class="profile-container">
+            <img src="{{ feature_image }}" alt="" class="about-photo" />
+          </div>
         </div>
       </div>
-
-      <a href="/kontakt" class="button align-end">Kontakt</a>
     </div>
-    {{!-- {{#if @custom.moje_zdjecie}} --}}
-    <div class="profile-container">
-      <img src="{{ feature_image}}" alt="" class="about-photo" />
-    </div>
-
-    {{!-- {{/if}} --}}
   </div>
 </div>
 
